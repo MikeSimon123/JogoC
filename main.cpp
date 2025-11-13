@@ -5,6 +5,10 @@ int main() {
     GLFWwindow* window = glfwCreateWindow(800, 800, "Janela do jogo", NULL, NULL);
     glfwMakeContextCurrent(window);
 
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(-5.0, 5.0, -5.0, 5.0, 1.0, -1.0);
+    
     while(!glfwWindowShouldClose(window)){
         
         glfwPollEvents();
